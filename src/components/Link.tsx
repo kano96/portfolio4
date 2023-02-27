@@ -17,7 +17,7 @@ const Link = ({
       className={`${
         selectedPage === upperCasePage ? "text-yellow" : ""
       } hover:text-yellow transition duration-500`}
-      href={`#${upperCasePage}`}
+      href={`#${page}`}
       onClick={() => setSelectedPage(upperCasePage)}
     >
       {page}
