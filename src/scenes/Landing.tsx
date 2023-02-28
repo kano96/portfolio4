@@ -3,6 +3,7 @@ import { Sections } from "../enums/SectionsEnum";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 type Props = {
   setSelectedPage: Dispatch<SetStateAction<Sections>>;
@@ -19,7 +20,15 @@ const Landing = ({ setSelectedPage }: Props) => {
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
-            <img
+            <motion.img
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
               src="assets/KevinTorres.jpeg"
               alt="profile"
               className="rounded-t-full hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[300px] md:max-w-[400px]"
@@ -40,7 +49,7 @@ const Landing = ({ setSelectedPage }: Props) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -56,6 +65,49 @@ const Landing = ({ setSelectedPage }: Props) => {
             I'am a Software Developer with years of experience in React, Node,
             TypeScript, Go, Python, AWS and Azure.
           </p>
+        </motion.div>
+
+        {/* CALL TO ACTIONS */}
+        <motion.div
+          className="flex mt-5 justify-center md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 1.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <AnchorLink
+            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
+            onClick={() => setSelectedPage(Sections.CONTACT)}
+            href="#Contact"
+          >
+            Contact Me
+          </AnchorLink>
+          <AnchorLink
+            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+            onClick={() => setSelectedPage(Sections.CONTACT)}
+            href="#Contact"
+          >
+            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
+              Let's talk.
+            </div>
+          </AnchorLink>
+        </motion.div>
+        <motion.div
+          className="flex mt-5 justify-center md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 1.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <SocialMediaIcons />
         </motion.div>
       </div>
     </section>
