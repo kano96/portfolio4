@@ -3,7 +3,9 @@ import { Sections } from "./enums/SectionsEnum";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
+import MySkills from "./scenes/MySkills";
 import Landing from "./scenes/Landing";
+import LineGradient from "./components/LineGradient";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(Sections.HOME);
@@ -21,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-deep-blue">
+    <div className="App bg-deep-blue max-w-7xl mx-auto">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -35,6 +37,10 @@ function App() {
           />
         )}
         <Landing setSelectedPage={setSelectedPage} />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <MySkills />
       </div>
     </div>
   );
