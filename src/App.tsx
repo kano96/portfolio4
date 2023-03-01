@@ -6,6 +6,7 @@ import DotGroup from "./scenes/DotGroup";
 import MySkills from "./scenes/MySkills";
 import Landing from "./scenes/Landing";
 import Projects from "./scenes/Projects";
+import Footer from "./scenes/Footer";
 import LineGradient from "./components/LineGradient";
 import Contact from "./scenes/Contact";
 
@@ -52,6 +53,7 @@ function App() {
       <div className="w-5/6 mx-auto md:h-screen">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
