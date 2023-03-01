@@ -3,7 +3,7 @@ type Props = {
 };
 
 const LineGradient = ({ width = "w-full" }: Props) => {
-  return <div className={`h-05 ${width} bg-gradient-rainblue`} />;
+  return <div className={`h-0.5 ${width} bg-gradient-rainblue`} />;
 };
 
 export default LineGradient;

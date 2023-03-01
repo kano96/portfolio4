@@ -19,7 +19,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
               ? selectedStyles
               : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-          href={page}
+          href={`#${page}`}
           onClick={() => setSelectedPage(page.toUpperCase() as Sections)}
         />
       ))}
