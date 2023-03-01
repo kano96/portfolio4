@@ -12,12 +12,13 @@ const Link = ({
   setSelectedPage: Dispatch<SetStateAction<Sections>>;
 }) => {
   const upperCasePage = page!.toUpperCase() as Sections;
+
   return (
     <AnchorLink
       className={`${
         selectedPage === upperCasePage ? "text-yellow" : ""
       } hover:text-yellow transition duration-500`}
-      href={`#${page}`}
+      href={`#${page === "Skills & Experience" ? "Skills" : page}`}
       onClick={() => setSelectedPage(upperCasePage)}
     >
       {page}
