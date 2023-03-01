@@ -7,6 +7,7 @@ import MySkills from "./scenes/MySkills";
 import Landing from "./scenes/Landing";
 import Projects from "./scenes/Projects";
 import LineGradient from "./components/LineGradient";
+import Contact from "./scenes/Contact";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(Sections.HOME);
@@ -46,6 +47,10 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto">
         <Projects />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-screen">
+        <Contact />
       </div>
     </div>
   );
