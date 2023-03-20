@@ -36,7 +36,11 @@ const Project = ({
           {repository2 && <a href={repository1}>🔗Back repo</a>}
         </div>
       </div>
-      <img src={`../assets/projects/${projectTitle}.png`} alt={projectTitle} />
+      <img
+        src={`../assets/projects/${projectTitle}.png`}
+        alt={projectTitle}
+        className="h-full"
+      />
     </motion.div>
   );
 };

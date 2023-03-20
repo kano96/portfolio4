@@ -44,4 +44,11 @@ export const projects: ProjectProps[] = [
     repository1: "https://github.com/kano96/graphql-blogs",
     title: "GraphQL Blogs",
   },
+  {
+    demoLink: "https://linktree-two-nu.vercel.app/",
+    description:
+      "This is a React web page whit authentication and authorization based on firebase, also it uses firebase storage and database",
+    repository1: "https://github.com/kano96/linktree",
+    title: "Linktree",
+  },
 ];
