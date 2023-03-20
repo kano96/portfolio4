@@ -37,4 +37,11 @@ export const projects: ProjectProps[] = [
     repository1: "https://github.com/kano96/houm-challenge",
     title: "Rick and morty characters",
   },
+  {
+    demoLink: "https://graphql-blogs-two.vercel.app/",
+    description:
+      "This is a NextJS page, it uses graphQL in order to fetch and manipulate data, using also a CMS as backend",
+    repository1: "https://github.com/kano96/graphql-blogs",
+    title: "GraphQL Blogs",
+  },
 ];
