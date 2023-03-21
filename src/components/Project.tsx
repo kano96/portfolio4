@@ -31,9 +31,17 @@ const Project = ({
         <p className="text-md md:text-2xl font-playfair font-bold">{title}</p>
         {isAboveMediumScreens && <p className="mt-7">{description}</p>}
         <div className="text-sm pt-2 font-semibold">
-          <a href={demoLink}>🔗Live Demo</a>
-          <a href={repository1}>🔗Front repo</a>
-          {repository2 && <a href={repository1}>🔗Back repo</a>}
+          <a href={demoLink} target="_blank">
+            🔗Live Demo
+          </a>
+          <a href={repository1} target="_blank">
+            🔗Front repo
+          </a>
+          {repository2 && (
+            <a href={repository1} target="_blank">
+              🔗Back repo
+            </a>
+          )}
         </div>
       </div>
       <img
