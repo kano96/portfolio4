@@ -51,4 +51,11 @@ export const projects: ProjectProps[] = [
     repository1: "https://github.com/kano96/linktree",
     title: "Linktree",
   },
+  {
+    demoLink: "https://twitter-clone-kano96.vercel.app/",
+    description:
+      "This is a Twitter clone, it uses T3 stack with NextJS, TailwindCSS and TypeScript, it has a login and register page, a feed page and a profile page.",
+    repository1: "https://github.com/kano96/twitter-clone",
+    title: "Twitter clone",
+  },
 ];
