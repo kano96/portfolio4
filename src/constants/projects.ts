@@ -52,6 +52,13 @@ export const projects: ProjectProps[] = [
     title: "Linktree",
   },
   {
+    demoLink: "https://threads-clone-gamma-lime.vercel.app/",
+    description:
+      "This is a clone of the Thread, it uses NextJS, TailwindCSS and TypeScript, it has a login and register page, a feed page, communities, activities and a profile page.",
+    repository1: "https://github.com/kano96/threads-clone",
+    title: "Threads clone",
+  },
+  {
     demoLink: "https://twitter-clone-kano96.vercel.app/",
     description:
       "This is a Twitter clone, it uses T3 stack with NextJS, TailwindCSS and TypeScript, it has a login and register page, a feed page and a profile page.",
